@@ -1,0 +1,64 @@
+{% extends 'todoapp/base.html'%}
+{% block content %}
+
+<div class="header">
+    <h1>{{request.user}}のカルテ</h1>
+</div>
+
+
+<a href="{% url 'create-task' %}">タスクの追加</a>
+
+<form method="GET">
+ <input type="text" name="search" value="{{search}}" />
+ <input type="submit" value="検索" />
+</form> 
+
+
+
+<!-- <table>
+    <tr>
+        <th>タスク</th>
+
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td>{{task.title}}</td>
+        <td><a href="{% url 'task' task.id %}">確認</a></td>
+        <td><a href="{% url 'edit-task' task.id %}">編集</a></td>
+        <td><a href="{% url 'delete-task' task.id %}">削除</a></td>
+    </tr>
+    {% endfor %}
+</table> -->
+
+
+<div class="tasksWrapper">
+    {% for task in tasks %}
+<div class="taskWrapper">
+    <div class="tasktitle">
+        
+        <a href="{% url 'task' task.id %}">{{task}}</a>
+    </div>
+
+    <div>
+    <a href="{% url 'edit-task' task.id %}"class="editButton">編集　</a>
+    
+    <a href="{% url 'delete-task' task.id %}"class="deleteButton">削除　</a>
+    </div>
+
+</div>
+    {% endfor %}
+</div>
+
+<div class="loginAndLogout">
+    {% if request.user.is_authenticated %}
+
+<!-- <p>{{request.user}}</p> -->
+<a href="{% url 'logout' %}" >ログアウト</a>
+
+{% else %}
+<a href="{% url 'login' %}" >ログイン</a>
+{% endif %}
+
+
+</div>
+{% endblock content %}

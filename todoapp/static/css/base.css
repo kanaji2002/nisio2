@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(204, 249, 255);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-top: 55px;
+    }
+
+    .todoAppWrapper {
+        max-width : 539px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0px 0px 29px -1px #777777;
+        border-radius: 10px;
+    }
+
+    a{
+        color: #595959;
+        text-decoration: none;
+    }
+
+    h1{
+        margin: 0;
+    }
+
+.header{
+    text-align: center;
+    padding: 20px 0;
+    background: rgb(3,156,181);
+    background: linear-gradient(90deg, rgba(3,156,181,1) 0%, rgba(31,110,210,1) 100%);
+    border-radius: 10px 10px 0 0;
+    color: white;
+
+}
+
+.taskWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    border-top: 1px solid rgb(99, 83, 83) ;
+    
+}
+
+.loginAndLogout a{
+    color: lightcoral;
+}
+
