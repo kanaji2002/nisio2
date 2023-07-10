@@ -1,6 +1,8 @@
+{% load static %}
 <a href="{% url 'tasks' %}">戻る</a>
 <h1>カルテ：{{task.title}}</h1>
 <h1>記述者：{{task.user}}</h1>
 <p>
     <h3>記述：{{task.description}}</h3>
+    <img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="100%" alt="" class="img-fluid">
 </p>
