@@ -41,7 +41,22 @@ body{
     
 }
 
+.taskWrapper2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
 .loginAndLogout a{
     color: lightcoral;
 }
 
+div p{
+    display: inline-block;
+}
+.tsuika_kennsaku{
+    float: left;
+    display: inline-block;
+    margin: 0 10px;
+}

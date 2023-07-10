@@ -5,13 +5,21 @@
     <h1>{{request.user}}のカルテ</h1>
 </div>
 
+<div class="tsuika_kennsaku_p">
 
-<a href="{% url 'create-task' %}">タスクの追加</a>
+    <div class="taskWrapper2">
+        <a href="{% url 'create-task' %}">カルテの追加</a>
 
-<form method="GET">
- <input type="text" name="search" value="{{search}}" />
- <input type="submit" value="検索" />
-</form> 
+    <div class="taskWrapper2">
+        <form method="GET">
+        <input type="text" name="search" value="{{search}}" />
+        <input type="submit" value="検索" />
+        </form> 
+    </div>
+
+</div>
+
+
 
 
 
