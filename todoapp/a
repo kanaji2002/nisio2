@@ -1,0 +1,15 @@
+import django_tables2 as tables
+
+class UserTable(tables.Table):
+    staff_id = tables.Column(accessor="staff_id",
+                             verbose_name="STAFF ID",
+                             order_by=("staff_id"))
+    name = tables.Column(accessor="name",
+                         verbose_name="USER NAME",
+                         order_by=("name"))
+    organization = tables.Column(accessor="organization.name",
+                                 verbose_name="ORGANIZATION",
+                                 order_by=("organization.organization_id"))
+
+    class Meta:
+        attrs = {"class": "paleblue"}

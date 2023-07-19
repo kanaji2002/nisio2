@@ -1,8 +1,22 @@
 {% load static %}
 <a href="{% url 'tasks' %}">戻る</a>
-<h1>カルテ：{{task.title}}</h1>
-<h1>記述者：{{task.user}}</h1>
-<p>
-    <h3>記述：{{task.description}}</h3>
-    <img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="100%" alt="" class="img-fluid">
-</p>
+<table align="center" border="1" width="80%">
+    <tr>
+        <td>カルテ</td>
+        <td>{{task.title}}</td>
+    </tr>
+    <tr>
+        <td>記述者</td>
+        <td>{{task.user}}</td>
+    </tr>
+    <tr>
+        <td>記述</td>
+        <td>{{task.description}}</td>
+    </tr>
+</table>
+<table align="center" border="0" width="80%">
+    <tr>
+        <td><img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="80%" class="img-fluid"></td>
+        <td><img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="80%" class="img-fluid"></td>
+    </tr>
+</table>
