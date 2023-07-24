@@ -1,6 +1,46 @@
+{% extends 'todoapp/base.html'%}
+{% load static %}
+{% block content %}
+<h1>{{task}}の詳細</h1>
 <a href="{% url 'tasks' %}">戻る</a>
-<h1>カルテ：{{task.title}}</h1>
-<h1>記述者：{{task.user}}</h1>
-<p>
-    <h3>記述：{{task.description}}</h3>
-</p>
+<table align="center" border="1" width="80%">
+    <tr>
+        <td>商品ID</td>
+        <td>{{task.device_num}}</td>
+    </tr>
+    <tr>
+        <td>型式・型番</td>
+        <td>{{task}}</td>
+    </tr>
+    <tr>
+        <td>年式</td>
+        <td>{{task.model_year}}</td>
+    </tr>
+    <tr>
+        <td>作業実施日</td>
+        <td>{{task.work_date}}</td>
+    </tr>
+    <tr>
+        <td>区分A</td>
+        <td>{{task.divA}}</td>
+    </tr>
+    <tr>
+        <td>区分B</td>
+        <td>{{task.divB}}</td>
+    </tr>
+    <tr>
+        <td>分解図</td>
+        <td>{{task.disassemble_fig}}</td>
+    </tr>
+    <tr>
+        <td>発注書</td>
+        <td>{{task.order_fig}}</td>
+    </tr>
+</table>
+<table align="center" border="0" width="80%">
+    <tr>
+        <td><img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="80%" class="img-fluid"></td>
+        <td><img src="{% static "images/PXL_20230516_013636126~2.jpg"%}" width="80%" class="img-fluid"></td>
+    </tr>
+</table>
+{% endblock content %}

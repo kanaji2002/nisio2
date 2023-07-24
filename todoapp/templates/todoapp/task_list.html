@@ -1,22 +1,31 @@
 {% extends 'todoapp/base.html'%}
+{% load static %}
 {% block content %}
 
 <div class="header">
-    <h1>{{request.user}}のカルテ</h1>
+    <h1>カルテ検索</h1>
 </div>
 
+
 <div class="tsuika_kennsaku_p">
-
     <div class="taskWrapper2">
+        <div class = "taskWrapper2">
+            <a>商品CD</a>
+            <img src="{% static "images/search.svg"%}" width="8%" style="margin: 0 0 0 auto;" alt="" class="img-fluid">
+            <form method="GET">
+                <input type="text" name="search" value="{{search}}" />
+                <input type="submit" value="検索" />
+            </form>
+        </div>
         <a href="{% url 'create-task' %}">カルテの追加</a>
-
-    <div class="taskWrapper2">
-        <form method="GET">
-        <input type="text" name="search" value="{{search}}" />
-        <input type="submit" value="検索" />
-        </form> 
+        <div class="loginAndLogout">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'logout' %}" >ログアウト</a>
+            {% else %}
+            <a href="{% url 'login' %}" >ログイン</a>
+            {% endif %}
+        </div>
     </div>
-
 </div>
 
 
@@ -41,32 +50,21 @@
 
 <div class="tasksWrapper">
     {% for task in tasks %}
-<div class="taskWrapper">
-    <div class="tasktitle">
-        
-        <a href="{% url 'task' task.id %}">{{task}}</a>
-    </div>
+    <div class="taskWrapper">
+        <div class="tasktitle">
+            <a href="{% url 'task' task.id %}">{{task}}</a>
+        </div>
 
-    <div>
-    <a href="{% url 'edit-task' task.id %}"class="editButton">編集　</a>
-    
-    <a href="{% url 'delete-task' task.id %}"class="deleteButton">削除　</a>
-    </div>
+        <div>
+        {% comment %} <a href="{% url 'edit-task' task.id %}"class="editButton">編集</a>
+        <a href="{% url 'delete-task' task.id %}"class="deleteButton">削除</a> {% endcomment %}
+        </div>
 
-</div>
+    </div>
     {% endfor %}
 </div>
 
-<div class="loginAndLogout">
-    {% if request.user.is_authenticated %}
-
 <!-- <p>{{request.user}}</p> -->
-<a href="{% url 'logout' %}" >ログアウト</a>
-
-{% else %}
-<a href="{% url 'login' %}" >ログイン</a>
-{% endif %}
-
 
 </div>
 {% endblock content %}
