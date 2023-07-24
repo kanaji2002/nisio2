@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head>
+    <title>カルテ作成ページ</title>
+</head>
+
+<body>
+    <h1>カルテ作成</h1>
+
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td colspan="3"><label for="cd">商品CD</label></td>
+                <td><input type="text" name="text" id="cd"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="date">作業日</label></td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="hour">アワメータ Hr</label></td>
+                <td><input type="number" name="hour" id="hour"></td>
+            </tr>
+            <tr>
+                <td><label for="fix">修理店</label></td>
+                <td><input type="number" name="fix" id="fix"></td>
+                <td><button>…</button></td>
+                <td>四国営業部</td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="divA">修理区分</label></td>
+                <td><input type="radio" name="divA" id="divA1"></td>
+                <td><a>板金修理</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><input type="radio" name="divA" id="divA2"></td>
+                <td><a>特自検</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><input type="radio" name="divA" id="divA3"></td>
+                <td><a>出張修理</a></td>
+            </tr>
+            <tr>
+                <td colspan="2">修理内容</td>
+                <td><a>大分類</a></td>
+                <td>
+                    <select name="divB">
+                        <option value="動力">足回り</option>
+                        <option value="フレーム">フレーム</option>
+                        <option value="動力">動力</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><a>中分類</a></td>
+                <td>
+                    <select name="divC">
+                        <option value="フレーム">タイヤ</option>
+                        <option value="動力">キャタピラ</option>
+                        <option value="動力">ホイール</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">分解図</td>
+                <td><input type="file" name="disassemble" id="disassemble"></td>
+            </tr>
+            <tr>
+                <td colspan="3">修理画像</td>
+                <td><input type="file" name="fix" id="fix"></td>
+            </tr>
+        </table>
+    </form>
+
+</html>

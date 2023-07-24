@@ -1,0 +1,15 @@
+{% extends 'todoapp/base.html'%}
+{% load static %}
+<h1>カルテの追加</h1>
+<a href="{% url 'tasks' %}">戻る</a>
+<form method="POST" aciton="">
+    <select>
+        <option value="ja">日本</option>
+        <option value="us">アメリカ</option>
+        <option value="uk">イギリス</option>
+        <option value="ch">中国</option>
+        <option value="kr">韓国</option>
+    </select>
+    {% csrf_token %}
+</form>
+{% endblock content %}
