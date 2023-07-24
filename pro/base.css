@@ -44,6 +44,11 @@ h1 {
 
 }
 
+.small{
+   
+        width: 150px;
+        
+}
 .taskWrapper{
     display: flex;
     justify-content: space-between;
@@ -65,6 +70,14 @@ h1 {
     width:700px;
     margin-right: auto;
     margin-left : auto;
+    padding-top: 20px;
+
+}
+
+.center2{
+  
+    margin-right: 200px;
+    margin-left : 200px;
     padding-top: 20px;
 
 }
