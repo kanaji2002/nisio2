@@ -1,0 +1,83 @@
+CSS
+.form_flat form {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+.body {
+    background-color: rgb(204, 249, 255);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-top: 55px;
+    }
+
+h1 {
+        background: #c2edff;/*背景色*/
+        padding: 0.5em;/*文字まわり（上下左右）の余白*/
+    }
+
+    .todoAppWrapper {
+        max-width : 539px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0px 0px 29px -1px #777777;
+        border-radius: 10px;
+    }
+
+    a{
+        color: #595959;
+        text-decoration: none;
+    }
+
+    h1{
+        margin: 0;
+    }
+
+
+.gamenn {
+    text-align: center;
+    padding: 20px 0;
+    background: rgb(3,156,181);
+    background: linear-gradient(90deg, rgba(3,156,181,1) 0%, rgba(31,110,210,1) 100%);
+    border-radius: 10px 10px 0 0;
+    color: white;
+
+}
+
+.taskWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    border-top: 1px solid rgb(99, 83, 83) ;
+    
+}
+
+.nisio-logo{
+    background-image:url(/nishio-logo2.jpg);             /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */              
+    width:auto;                                   /* 横幅のサイズを指定    */
+    height:400pX;                                 /* 縦幅のサイズを指定    */
+}
+
+.center{
+    width:700px;
+    margin-right: auto;
+    margin-left : auto;
+    padding-top: 20px;
+
+}
+
+.log{
+    color: lightcoral;
+}
+
+div p * {
+    display: inline-block;
+}
+.tsuika_kennsaku{
+    float: left;
+    display: inline-block;
+    margin: 0 10px;
+}
